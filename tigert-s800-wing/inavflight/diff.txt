@@ -48,9 +48,11 @@ led 7 15,6::C:7
 aux 0 0 1 1300 2100
 aux 1 1 1 1700 2100
 aux 2 20 1 900 2100
-aux 3 10 0 1700 2100
+aux 3 10 3 1700 2100
 aux 4 14 2 1700 2100
 aux 5 11 5 1700 2100
+aux 6 12 0 900 1300
+aux 7 15 0 1700 2100
 
 # adjrange
 
@@ -76,18 +78,29 @@ set motor_pwm_rate = 2000
 set motor_pwm_protocol = MULTISHOT
 set align_board_roll = 4
 set align_board_yaw = -900
-set osd_main_voltage_pos = 3084
-set osd_gps_sats_pos = 3424
+set osd_video_system = 2
+set osd_time_alarm = 15
+set osd_main_voltage_pos = 2411
+set osd_rssi_pos = 2401
+set osd_flytimer_pos = 2422
+set osd_ontime_pos = 343
+set osd_flymode_pos = 396
+set osd_throttle_pos = 65
+set osd_artificial_horizon = 200
+set osd_current_draw_pos = 97
+set osd_mah_drawn_pos = 129
+set osd_gps_sats_pos = 1376
+set osd_altitude_pos = 2092
 
 # profile
 profile 1
 
 set fw_p_pitch = 8
 set fw_i_pitch = 18
-set fw_ff_pitch = 25
+set fw_ff_pitch = 35
 set fw_p_roll = 8
 set fw_i_roll = 18
-set fw_ff_roll = 18
-set roll_rate = 60
-set pitch_rate = 50
-
+set fw_ff_roll = 35
+set roll_rate = 36
+set pitch_rate = 10
+set yaw_rate = 10

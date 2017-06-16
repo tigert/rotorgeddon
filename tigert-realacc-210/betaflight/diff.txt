@@ -1,0 +1,40 @@
+# Betaflight / SPRACINGF3EVO 3.1.7 Apr  3 2017 / 22:28:08 (e1c4b5c)
+name X210
+resource MOTOR 4 A06
+resource MOTOR 5 NONE
+
+feature -RX_PPM
+feature -CURRENT_METER
+feature -RSSI_ADC
+feature -BLACKBOX
+feature -TRANSPONDER
+feature -SDCARD
+feature RX_SERIAL
+feature AIRMODE
+beeper -ON_USB
+map TAER1234
+serial 1 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+aux 0 0 1 1300 2100
+aux 1 4 1 1700 2100
+aux 2 2 5 1700 2100
+aux 3 13 5 1700 2100
+aux 4 30 0 1700 2100
+set min_check = 1010
+set fpv_mix_degrees = 32
+set min_throttle = 1032
+set motor_pwm_protocol = DSHOT300
+set serialrx_provider = SBUS
+set align_board_yaw = 90
+set deadband = 4
+set yaw_deadband = 4
+profile 0
+
+set vbat_pid_gain = ON
+rateprofile 0
+rateprofile 0
+
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 80
+

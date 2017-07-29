@@ -19,21 +19,21 @@ mode_color 6 0 0
 mode_color 6 1 1
 mode_color 7 0 10
 aux 0 0 1 1300 2100
-aux 1 4 0 1700 2100
-aux 2 2 1 1700 2100
-aux 3 13 5 1700 2100
+aux 1 2 1 1700 2100
+aux 2 13 5 1700 2100
+aux 3 30 0 1700 2100
 rxfail 5 s 2000
 set gyro_notch1_hz = 0
 set gyro_notch2_hz = 0
 set min_check = 1000
 set max_check = 2000
 set rssi_channel = 9
-set fpv_mix_degrees = 20
+set fpv_mix_degrees = 30
 set serialrx_provider = SBUS
 set min_throttle = 1064
 set use_unsynced_pwm = ON
 set motor_pwm_protocol = MULTISHOT
-set motor_pwm_rate = 2000
+set motor_pwm_rate = 4000
 set failsafe_throttle = 1150
 set failsafe_procedure = AUTO-LAND
 set align_board_yaw = 180
@@ -71,8 +71,8 @@ set osd_pidrate_profile_pos = 345
 set osd_avg_cell_voltage_pos = 2497
 set osd_pit_ang_pos = 257
 set osd_rol_ang_pos = 289
-set osd_battery_usage_pos = 2472
-set osd_disarmed_pos = 2282
+set osd_battery_usage_pos = 424
+set osd_disarmed_pos = 2346
 set osd_nheading_pos = 311
 set osd_nvario_pos = 279
 set osd_esc_tmp_pos = 82
@@ -80,15 +80,19 @@ set osd_esc_rpm_pos = 83
 set osd_stat_max_spd = OFF
 set osd_stat_max_curr = OFF
 set osd_stat_used_mah = OFF
+set osd_stat_max_alt = ON
 set osd_stat_bbox = OFF
 set osd_stat_endbatt = ON
 set osd_stat_bb_no = OFF
+set osd_stat_tim_1 = ON
 set vcd_video_system = 1
 profile 0
 
 set dterm_notch_hz = 0
+set vbat_pid_gain = ON
 rateprofile 0
 
 set roll_srate = 80
 set pitch_srate = 80
 set yaw_srate = 80
+

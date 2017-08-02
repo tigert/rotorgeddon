@@ -1,0 +1,59 @@
+# diff
+# Betaflight / OMNIBUS 3.1.7 Apr  3 2017 / 22:14:20 (e1c4b5c)
+name MosQ
+
+feature -RX_PPM
+feature -BLACKBOX
+feature -SDCARD
+feature RX_SERIAL
+feature LED_STRIP
+feature AIRMODE
+beeper -ON_USB
+map TAER1234
+serial 0 1 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+led 0 5,5::CBW:1
+led 1 6,5::CT:7
+led 2 8,5::CT:7
+led 3 9,5::CBW:1
+led 4 5,9::CBW:1
+led 5 6,9::CT:7
+led 6 8,9::CT:7
+led 7 9,9::CBW:1
+mode_color 6 0 4
+mode_color 6 1 7
+mode_color 7 0 10
+aux 0 0 1 1300 2100
+aux 1 4 0 1700 2100
+aux 2 2 1 1700 2100
+aux 3 13 5 1700 2100
+set min_check = 1010
+set max_check = 1990
+set rssi_channel = 16
+set min_throttle = 1034
+set max_throttle = 1990
+set motor_pwm_protocol = MULTISHOT
+set disarm_kill_switch = OFF
+set serialrx_provider = SBUS
+set baro_hardware = AUTO
+set osd_time_alarm = 5
+set osd_alt_alarm = 500
+set osd_vbat_pos = 2508
+set osd_rssi_pos = 2497
+set osd_flytimer_pos = 2518
+set osd_ontimer_pos = 374
+set osd_flymode_pos = 364
+set osd_throttle_pos = 417
+set osd_horizon_pos = 200
+set osd_craft_name_pos = 2081
+set osd_gps_speed_pos = 194
+set osd_altitude_pos = 2103
+profile 0
+
+set vbat_pid_gain = ON
+rateprofile 0
+rateprofile 0
+
+set roll_srate = 85
+set pitch_srate = 85
+set yaw_srate = 85

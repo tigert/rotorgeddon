@@ -1,6 +1,5 @@
-# diff
 # Betaflight / OMNIBUS 3.1.7 Apr  3 2017 / 22:14:20 (e1c4b5c)
-name MosQ
+name MosQuito
 
 feature -RX_PPM
 feature -BLACKBOX
@@ -30,11 +29,15 @@ aux 3 13 5 1700 2100
 set min_check = 1010
 set max_check = 1990
 set rssi_channel = 16
-set min_throttle = 1034
+set min_throttle = 1050
 set max_throttle = 1990
-set motor_pwm_protocol = MULTISHOT
+set digital_idle_percent =  3.680
+set motor_pwm_protocol = DSHOT600
 set disarm_kill_switch = OFF
 set serialrx_provider = SBUS
+set gyro_notch1_hz = 0
+set deadband = 5
+set yaw_deadband = 5
 set baro_hardware = AUTO
 set osd_time_alarm = 5
 set osd_alt_alarm = 500
@@ -48,12 +51,18 @@ set osd_horizon_pos = 200
 set osd_craft_name_pos = 2081
 set osd_gps_speed_pos = 194
 set osd_altitude_pos = 2103
+set vcd_video_system = 1
 profile 0
 
+set d_lowpass_type = PT1
 set vbat_pid_gain = ON
 rateprofile 0
 rateprofile 0
 
-set roll_srate = 85
-set pitch_srate = 85
-set yaw_srate = 85
+set rc_rate = 90
+set rc_rate_yaw = 90
+set rc_expo = 10
+set rc_yaw_expo = 10
+set roll_srate = 82
+set pitch_srate = 82
+set yaw_srate = 82

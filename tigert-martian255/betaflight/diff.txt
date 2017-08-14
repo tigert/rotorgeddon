@@ -38,7 +38,9 @@ set failsafe_throttle = 1150
 set failsafe_procedure = AUTO-LAND
 set osd_alt_alarm = 500
 set osd_vbat_pos = 2507
-set osd_rssi_pos = 2465
+set osd_rssi_pos = 2497
+set osd_flytimer_pos = 2518
+set osd_ontimer_pos = 2486
 set osd_flymode_pos = 364
 set osd_throttle_pos = 417
 set osd_vtx_channel_pos = 377
@@ -67,3 +69,4 @@ set rc_rate_yaw = 110
 set roll_srate = 82
 set pitch_srate = 82
 set yaw_srate = 82
+

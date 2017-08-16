@@ -66,3 +66,4 @@ set rc_yaw_expo = 10
 set roll_srate = 82
 set pitch_srate = 82
 set yaw_srate = 82
+

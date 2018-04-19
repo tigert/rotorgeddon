@@ -1,5 +1,5 @@
 # version
-# Betaflight / CLRACINGF4 (CLR4) 3.2.0 Aug 28 2017 / 11:47:49 (b2cd7294e)
+# Betaflight / CLRACINGF4 (CLR4) 3.2.1 Oct 15 2017 / 19:29:56 (434db9a36) MSP API: 1.36
 
 # name
 name AliEx
@@ -40,7 +40,8 @@ serial 3 8192 115200 57600 0 115200
 # aux
 aux 0 0 1 1300 2100
 aux 1 1 1 1700 2100
-aux 2 13 5 1700 2100
+aux 2 13 0 1700 2100
+aux 3 35 5 1700 2100
 
 # adjrange
 
@@ -55,6 +56,7 @@ set gyro_notch1_hz = 0
 set gyro_notch1_cutoff = 0
 set gyro_notch2_hz = 0
 set gyro_notch2_cutoff = 0
+set acc_hardware = NONE
 set min_check = 1014
 set rssi_channel = 9
 set serialrx_provider = SBUS
@@ -62,12 +64,12 @@ set min_throttle = 1024
 set dshot_idle_value = 420
 set motor_pwm_protocol = DSHOT600
 set failsafe_throttle = 1050
-set failsafe_procedure = AUTO-LAND
 set yaw_motors_reversed = ON
+set small_angle = 180
 set deadband = 4
 set yaw_deadband = 4
 set pid_process_denom = 1
-set osd_vbat_pos = 2498
+set osd_vbat_pos = 450
 set osd_rssi_pos = 2489
 set osd_tim_1_pos = 54
 set osd_tim_2_pos = 2518
@@ -95,7 +97,7 @@ set osd_debug_pos = 1
 set osd_power_pos = 321
 set osd_pidrate_profile_pos = 345
 set osd_warnings_pos = 2409
-set osd_avg_cell_voltage_pos = 2466
+set osd_avg_cell_voltage_pos = 2498
 set osd_pit_ang_pos = 257
 set osd_rol_ang_pos = 289
 set osd_battery_usage_pos = 392
@@ -118,6 +120,5 @@ set dterm_setpoint_weight = 108
 # rateprofile
 rateprofile 0
 
-set rc_rate = 123
-set rc_rate_yaw = 141
+set rc_rate = 118
 set yaw_srate = 66

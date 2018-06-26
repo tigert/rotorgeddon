@@ -1,0 +1,78 @@
+# diff 
+
+# version
+# Betaflight / CLRACINGF4 (CLR4) 3.3.1 Apr  3 2018 / 09:28:24 (4b7eaf79d) MSP API: 1.37
+
+# name
+
+# resources
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature SOFTSERIAL
+feature TELEMETRY
+feature AIRMODE
+feature ANTI_GRAVITY
+feature DYNAMIC_FILTER
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+serial 3 16384 115200 57600 0 115200
+serial 5 8192 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 1 1300 2100 0
+aux 1 13 0 1700 2100 0
+aux 2 33 2 1300 1700 0
+aux 3 34 2 1700 2100 0
+aux 4 35 5 1700 2100 0
+
+# adjrange
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# master
+set min_check = 1000
+set max_check = 2000
+set rssi_channel = 9
+set serialrx_provider = SBUS
+set motor_pwm_protocol = DSHOT600
+set yaw_motors_reversed = ON
+set deadband = 4
+set yaw_deadband = 4
+set pid_process_denom = 1
+set osd_warnings = 63
+set osd_vbat_pos = 375
+set osd_rssi_pos = 2105
+set osd_tim_2_pos = 2402
+set osd_avg_cell_voltage_pos = 2422
+set vcd_video_system = 1
+
+# profile
+profile 0
+
+
+# rateprofile
+rateprofile 0

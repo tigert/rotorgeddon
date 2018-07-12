@@ -3,20 +3,24 @@
 
 
 feature -RX_PPM
+feature -TRANSPONDER
 feature RX_SERIAL
 feature LED_STRIP
 feature AIRMODE
 serial 1 64 115200 57600 0 115200
-led 0 10,9::CO:13
-led 1 10,8::CO:13
-led 2 10,7::CO:13
-led 3 10,6::CO:13
-led 4 7,9::CO:13
-led 5 7,8::CO:13
-led 6 7,7::CO:13
-led 7 7,6::CO:13
+led 0 7,9::AW:5
+led 1 7,8::AW:5
+led 2 7,7::AW:5
+led 3 7,6::CB:1
+led 4 10,6::CB:1
+led 5 10,7::AW:5
+led 6 10,8::AW:5
+led 7 10,9::AW:5
+mode_color 6 0 5
 mode_color 6 1 13
 aux 0 0 1 1300 2100 0
+set gyro_lowpass_hz = 120
+set acc_hardware = NONE
 set acc_calibration = -146,268,-288
 set mag_hardware = NONE
 set baro_hardware = NONE
@@ -27,8 +31,21 @@ set align_board_yaw = 90
 set yaw_motors_reversed = ON
 profile 0
 
+set dterm_lowpass2_hz = 250
 set dterm_notch_cutoff = 0
-set setpoint_relax_ratio = 100
+set setpoint_relax_ratio = 50
+set dterm_setpoint_weight = 100
+set iterm_relax = RP
+set iterm_relax_cutoff = 10
+set throttle_boost = 8
+set p_pitch = 58
+set i_pitch = 65
+set d_pitch = 35
+set p_roll = 50
+set i_roll = 60
+set d_roll = 30
+set i_yaw = 60
 rateprofile 0
 
-
+set tpa_rate = 20
+set tpa_breakpoint = 1050

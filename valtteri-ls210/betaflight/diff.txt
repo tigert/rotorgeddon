@@ -1,0 +1,34 @@
+# diff
+# Betaflight / SPRACINGF3EVO (SPEV) 3.4.0 Jun 24 2018 / 10:09:03 (1c081ae8c) MSP API: 1.39
+
+
+feature -RX_PPM
+feature RX_SERIAL
+feature LED_STRIP
+feature AIRMODE
+serial 1 64 115200 57600 0 115200
+led 0 10,9::CO:13
+led 1 10,8::CO:13
+led 2 10,7::CO:13
+led 3 10,6::CO:13
+led 4 7,9::CO:13
+led 5 7,8::CO:13
+led 6 7,7::CO:13
+led 7 7,6::CO:13
+mode_color 6 1 13
+aux 0 0 1 1300 2100 0
+set acc_calibration = -146,268,-288
+set mag_hardware = NONE
+set baro_hardware = NONE
+set serialrx_provider = IBUS
+set min_throttle = 1090
+set motor_pwm_protocol = MULTISHOT
+set align_board_yaw = 90
+set yaw_motors_reversed = ON
+profile 0
+
+set dterm_notch_cutoff = 0
+set setpoint_relax_ratio = 100
+rateprofile 0
+
+

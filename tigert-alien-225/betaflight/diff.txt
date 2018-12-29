@@ -1,10 +1,13 @@
-# diff 
+# diff
 
 # version
-# Betaflight / CLRACINGF4 (CLR4) 3.2.3 Dec 11 2017 / 07:37:19 (cb962eda1) MSP API: 1.36
+# Betaflight / CLRACINGF4 (CLR4) 3.5.1 Sep  8 2018 / 05:03:13 (d9fb5ca13) MSP API: 1.40
+
+board_name CLRACINGF4
+manufacturer_id 
 
 # name
-name AliEx
+name tigert
 
 # resources
 
@@ -19,38 +22,38 @@ name AliEx
 feature TELEMETRY
 feature LED_STRIP
 feature AIRMODE
-feature ANTI_GRAVITY
-feature DYNAMIC_FILTER
 
 # beeper
 beeper -ON_USB
+
+# beacon
 
 # map
 map TAER1234
 
 # serial
 serial 0 64 115200 57600 0 115200
-serial 2 32 115200 57600 0 115200
 serial 3 8192 115200 57600 0 115200
+serial 5 32 115200 57600 0 115200
 
 # led
-led 0 5,7::AW:0
-led 1 6,7::AW:0
-led 2 10,7::AW:0
-led 3 11,7::AW:0
+led 0 10,8::A:4
+led 1 11,8::CB:1
+led 2 6,8::A:4
+led 3 5,8::CB:1
 
 # color
 
 # mode_color
-mode_color 6 0 5
+mode_color 6 0 4
 mode_color 6 1 13
 mode_color 7 0 10
 
 # aux
-aux 0 0 1 1300 2100
-aux 1 1 1 1700 2100
-aux 2 13 0 1700 2100
-aux 3 35 5 1700 2100
+aux 0 0 1 1300 2100 0 0
+aux 1 13 0 1700 2100 0 0
+aux 2 15 1 1800 2100 0 0
+aux 3 35 5 1700 2100 0 0
 
 # adjrange
 
@@ -61,25 +64,18 @@ aux 3 35 5 1700 2100
 # rxfail
 
 # master
-set gyro_notch1_hz = 0
-set gyro_notch1_cutoff = 0
-set gyro_notch2_hz = 0
-set gyro_notch2_cutoff = 0
-set acc_hardware = NONE
-set acc_trim_roll = 2
 set min_check = 1014
+set max_check = 1940
 set rssi_channel = 9
 set serialrx_provider = SBUS
 set min_throttle = 1024
-set dshot_idle_value = 420
 set motor_pwm_protocol = DSHOT600
-set failsafe_throttle = 1050
 set beeper_dshot_beacon_tone = 2
 set yaw_motors_reversed = ON
 set small_angle = 180
 set deadband = 4
 set yaw_deadband = 4
-set pid_process_denom = 1
+set tlm_halfduplex = OFF
 set osd_vbat_pos = 450
 set osd_rssi_pos = 2105
 set osd_tim_1_pos = 54
@@ -87,12 +83,10 @@ set osd_tim_2_pos = 2518
 set osd_flymode_pos = 333
 set osd_throttle_pos = 225
 set osd_vtx_channel_pos = 2081
-set osd_crosshairs = 200
-set osd_ah_sbar = 200
 set osd_ah_pos = 200
 set osd_current_pos = 2507
-set osd_mah_drawn_pos = 2467
-set osd_craft_name_pos = 65
+set osd_mah_drawn_pos = 2477
+set osd_craft_name_pos = 2092
 set osd_gps_speed_pos = 218
 set osd_gps_lon_pos = 82
 set osd_gps_lat_pos = 65
@@ -117,24 +111,20 @@ set osd_nheading_pos = 311
 set osd_nvario_pos = 279
 set osd_esc_tmp_pos = 82
 set osd_esc_rpm_pos = 83
+set vtx_channel = 2
+set vtx_freq = 5760
 
 # profile
 profile 0
 
-set dterm_lowpass_type = PT1
-set dterm_notch_hz = 0
-set dterm_notch_cutoff = 0
-set vbat_pid_gain = ON
-set anti_gravity_threshold = 250
-set anti_gravity_gain = 5000
-set setpoint_relax_ratio = 40
-set dterm_setpoint_weight = 170
-set p_pitch = 52
-set p_roll = 42
-set d_level = 76
 
 # rateprofile
 rateprofile 0
 
-set rc_rate = 118
-set yaw_srate = 66
+set roll_expo = 42
+set pitch_expo = 42
+set yaw_expo = 42
+set roll_srate = 78
+set pitch_srate = 78
+set yaw_srate = 78
+

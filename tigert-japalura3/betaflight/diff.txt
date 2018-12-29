@@ -1,5 +1,5 @@
 # version
-# Betaflight / CLRACINGF4 (CLR4) 3.5.1 Sep  8 2018 / 05:03:13 (d9fb5ca13) MSP API: 1.40
+# Betaflight / CLRACINGF4 (CLR4) 3.5.4 Dec 17 2018 / 11:36:37 (66b8ea143) MSP API: 1.40
 
 board_name CLRACINGF4
 manufacturer_id 
@@ -70,13 +70,11 @@ set max_check = 1995
 set rssi_channel = 18
 set fpv_mix_degrees = 34
 set serialrx_provider = SBUS
-set dshot_idle_value = 459
 set motor_pwm_protocol = DSHOT600
 set beeper_dshot_beacon_tone = 2
 set yaw_motors_reversed = ON
-set deadband = 5
-set yaw_deadband = 5
-set pid_process_denom = 1
+set deadband = 3
+set yaw_deadband = 3
 set osd_vbat_pos = 450
 set osd_rssi_pos = 441
 set osd_tim_1_pos = 54

@@ -1,5 +1,3 @@
-# diff
-
 # version
 # Betaflight / CLRACINGF4 (CLR4) 3.5.1 Sep  8 2018 / 05:03:13 (d9fb5ca13) MSP API: 1.40
 
@@ -33,8 +31,8 @@ map TAER1234
 
 # serial
 serial 0 64 115200 57600 0 115200
-serial 3 8192 115200 57600 0 115200
-serial 5 32 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+serial 5 8192 115200 57600 0 115200
 
 # led
 led 0 10,8::A:4
@@ -76,16 +74,20 @@ set small_angle = 180
 set deadband = 4
 set yaw_deadband = 4
 set tlm_halfduplex = OFF
+set osd_warn_core_temp = OFF
+set osd_cap_alarm = 1500
+set osd_tim2 = 1281
 set osd_vbat_pos = 450
 set osd_rssi_pos = 2105
 set osd_tim_1_pos = 54
 set osd_tim_2_pos = 2518
 set osd_flymode_pos = 333
+set osd_g_force_pos = 2328
 set osd_throttle_pos = 225
 set osd_vtx_channel_pos = 2081
 set osd_ah_pos = 200
-set osd_current_pos = 2507
-set osd_mah_drawn_pos = 2477
+set osd_current_pos = 459
+set osd_mah_drawn_pos = 2509
 set osd_craft_name_pos = 2092
 set osd_gps_speed_pos = 218
 set osd_gps_lon_pos = 82
@@ -111,20 +113,31 @@ set osd_nheading_pos = 311
 set osd_nvario_pos = 279
 set osd_esc_tmp_pos = 82
 set osd_esc_rpm_pos = 83
-set vtx_channel = 2
-set vtx_freq = 5760
+set vcd_video_system = PAL
 
 # profile
 profile 0
 
+set vbat_pid_gain = ON
+set anti_gravity_gain = 8000
+set feedforward_transition = 25
+set smart_feedforward = ON
+set iterm_relax = RP
+set throttle_boost = 8
+set f_pitch = 100
+set p_roll = 45
+set f_roll = 100
+set f_yaw = 100
 
 # rateprofile
 rateprofile 0
 
-set roll_expo = 42
-set pitch_expo = 42
-set yaw_expo = 42
-set roll_srate = 78
-set pitch_srate = 78
-set yaw_srate = 78
+set roll_rc_rate = 155
+set pitch_rc_rate = 155
+set yaw_rc_rate = 155
+set roll_expo = 30
+set pitch_expo = 30
+set roll_srate = 73
+set pitch_srate = 73
+set yaw_srate = 75
 

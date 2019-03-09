@@ -1,13 +1,10 @@
+# diff 
+
 # version
 # Betaflight / CLRACINGF4 (CLR4) 3.5.4 Dec 17 2018 / 11:36:37 (66b8ea143) MSP API: 1.40
 
 board_name CLRACINGF4
 manufacturer_id 
-mcu_id 002e003a3536470639363130
-signature 
-
-# reset configuration to default settings
-defaults nosave
 
 # name
 name japalura
@@ -110,21 +107,11 @@ set osd_nheading_pos = 311
 set osd_nvario_pos = 279
 set osd_esc_tmp_pos = 82
 set osd_esc_rpm_pos = 83
+set vtx_power = 4
 
 # profile
 profile 0
 
-
-# profile
-profile 1
-
-
-# profile
-profile 2
-
-
-# restore original profile selection
-profile 0
 
 # rateprofile
 rateprofile 0
@@ -135,27 +122,3 @@ set yaw_expo = 10
 set roll_srate = 74
 set pitch_srate = 74
 set yaw_srate = 74
-
-# rateprofile
-rateprofile 1
-
-
-# rateprofile
-rateprofile 2
-
-
-# rateprofile
-rateprofile 3
-
-
-# rateprofile
-rateprofile 4
-
-
-# rateprofile
-rateprofile 5
-
-
-# restore original rateprofile selection
-rateprofile 0
-

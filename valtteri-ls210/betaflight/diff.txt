@@ -1,6 +1,8 @@
-# diff
-# Betaflight / SPRACINGF3EVO (SPEV) 3.4.0 Jun 24 2018 / 10:09:03 (1c081ae8c) MSP API: 1.39
+# diff all
+# Betaflight / SPRACINGF3EVO (SPEV) 3.4.0 Jul  8 2018 / 04:32:41 (cce8a59be) MSP API: 1.39
 
+mcu_id 0028002e4e33571920303139
+defaults nosave
 
 feature -RX_PPM
 feature -TRANSPONDER
@@ -25,7 +27,7 @@ set acc_calibration = -146,268,-288
 set mag_hardware = NONE
 set baro_hardware = NONE
 set serialrx_provider = IBUS
-set min_throttle = 1090
+set min_throttle = 1100
 set motor_pwm_protocol = MULTISHOT
 set align_board_yaw = 90
 set yaw_motors_reversed = ON
@@ -33,8 +35,9 @@ profile 0
 
 set dterm_lowpass2_hz = 250
 set dterm_notch_cutoff = 0
-set setpoint_relax_ratio = 50
-set dterm_setpoint_weight = 100
+set vbat_pid_gain = ON
+set setpoint_relax_ratio = 100
+set dterm_setpoint_weight = 10
 set iterm_relax = RP
 set iterm_relax_cutoff = 10
 set throttle_boost = 8
@@ -45,7 +48,38 @@ set p_roll = 50
 set i_roll = 60
 set d_roll = 30
 set i_yaw = 60
+profile 1
+
+set dterm_notch_cutoff = 0
+set p_pitch = 0
+set i_pitch = 0
+set d_pitch = 0
+set p_roll = 0
+set i_roll = 0
+set d_roll = 0
+set p_yaw = 0
+set i_yaw = 0
+profile 2
+
+profile 1
 rateprofile 0
 
+set roll_expo = 10
+set pitch_expo = 10
+set yaw_expo = 10
+set roll_srate = 76
+set pitch_srate = 76
+set yaw_srate = 76
 set tpa_rate = 20
 set tpa_breakpoint = 1050
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+rateprofile 0

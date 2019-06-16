@@ -3,6 +3,11 @@
 
 board_name CLRACINGF4
 manufacturer_id 
+mcu_id 004100313436510530373838
+signature 
+
+# reset configuration to default settings
+defaults nosave
 
 # name
 name tigert
@@ -129,6 +134,17 @@ set p_roll = 45
 set f_roll = 100
 set f_yaw = 100
 
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 0
+
 # rateprofile
 rateprofile 0
 
@@ -141,3 +157,25 @@ set roll_srate = 73
 set pitch_srate = 73
 set yaw_srate = 75
 
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# rateprofile
+rateprofile 3
+
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 0

@@ -1,5 +1,8 @@
 # version
-# Betaflight / CLRACINGF4 (CLR4) 3.5.2 Oct 23 2018 / 13:04:55 (885974fbc) MSP API: 1.40
+# Betaflight / CLRACINGF4 (CLR4) 4.0.3 Jun  1 2019 / 11:15:21 (094cfc956) MSP API: 1.41
+
+# start the command batch
+batch start
 
 board_name CLRACINGF4
 manufacturer_id 
@@ -8,6 +11,10 @@ manufacturer_id
 name Monsta
 
 # resources
+
+# timer
+
+# dma
 
 # mixer
 
@@ -18,7 +25,6 @@ name Monsta
 
 # feature
 feature TELEMETRY
-feature AIRMODE
 
 # beeper
 
@@ -55,14 +61,16 @@ aux 3 35 5 1700 2100 0 0
 
 # rxfail
 
+# display_name
+
 # master
-set min_check = 1020
-set max_check = 1980
+set dyn_notch_range = LOW
+set dyn_notch_min_hz = 100
+set dyn_lpf_gyro_min_hz = 70
+set dyn_lpf_gyro_max_hz = 350
 set rssi_channel = 9
 set serialrx_provider = SBUS
-set dshot_idle_value = 442
 set motor_pwm_protocol = MULTISHOT
-set beeper_dshot_beacon_tone = 2
 set yaw_motors_reversed = ON
 set small_angle = 180
 set deadband = 3
@@ -94,13 +102,11 @@ set vcd_video_system = PAL
 # profile
 profile 0
 
-set dterm_notch_cutoff = 0
-set vbat_pid_gain = ON
-set feedforward_transition = 100
-set smart_feedforward = ON
-set iterm_relax = RP
-set throttle_boost = 0
-set p_roll = 45
+set dyn_lpf_dterm_min_hz = 70
+set dyn_lpf_dterm_max_hz = 150
+set dterm_lowpass2_hz = 120
+set iterm_relax_type = GYRO
+set iterm_relax_cutoff = 7
 
 # rateprofile
 rateprofile 0
@@ -114,3 +120,5 @@ set roll_srate = 73
 set pitch_srate = 73
 set yaw_srate = 75
 
+# end the command batch
+batch end

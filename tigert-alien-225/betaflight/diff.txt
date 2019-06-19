@@ -1,5 +1,8 @@
 # version
-# Betaflight / CLRACINGF4 (CLR4) 3.5.1 Sep  8 2018 / 05:03:13 (d9fb5ca13) MSP API: 1.40
+# Betaflight / CLRACINGF4 (CLR4) 4.0.3 Jun  1 2019 / 11:15:21 (094cfc956) MSP API: 1.41
+
+# start the command batch
+batch start
 
 board_name CLRACINGF4
 manufacturer_id 
@@ -8,6 +11,10 @@ manufacturer_id
 name tigert
 
 # resources
+
+# timer
+
+# dma
 
 # mixer
 
@@ -18,13 +25,13 @@ name tigert
 
 # feature
 feature TELEMETRY
-feature LED_STRIP
-feature AIRMODE
 
 # beeper
 beeper -ON_USB
 
 # beacon
+beacon RX_LOST
+beacon RX_SET
 
 # map
 map TAER1234
@@ -35,17 +42,10 @@ serial 2 32 115200 57600 0 115200
 serial 5 8192 115200 57600 0 115200
 
 # led
-led 0 10,8::A:4
-led 1 11,8::CB:1
-led 2 6,8::A:4
-led 3 5,8::CB:1
 
 # color
 
 # mode_color
-mode_color 6 0 4
-mode_color 6 1 13
-mode_color 7 0 10
 
 # aux
 aux 0 0 1 1300 2100 0 0
@@ -61,12 +61,12 @@ aux 3 35 5 1700 2100 0 0
 
 # rxfail
 
+# display_name
+
 # master
-set min_check = 1014
-set max_check = 1940
+set acc_calibration = 34,47,-136
 set rssi_channel = 9
 set serialrx_provider = SBUS
-set min_throttle = 1024
 set motor_pwm_protocol = DSHOT600
 set beeper_dshot_beacon_tone = 2
 set yaw_motors_reversed = ON
@@ -110,24 +110,27 @@ set osd_rol_ang_pos = 289
 set osd_battery_usage_pos = 392
 set osd_disarmed_pos = 2379
 set osd_nheading_pos = 311
-set osd_nvario_pos = 279
 set osd_esc_tmp_pos = 82
 set osd_esc_rpm_pos = 83
+set vtx_band = 3
+set vtx_freq = 5705
 set vcd_video_system = PAL
 
 # profile
-profile 0
+profile 2
 
-set vbat_pid_gain = ON
-set anti_gravity_gain = 8000
-set feedforward_transition = 25
-set smart_feedforward = ON
-set iterm_relax = RP
-set throttle_boost = 8
-set f_pitch = 100
-set p_roll = 45
-set f_roll = 100
-set f_yaw = 100
+set dterm_lowpass2_hz = 200
+set feedforward_transition = 30
+set iterm_relax_type = GYRO
+set iterm_relax_cutoff = 10
+set i_pitch = 85
+set i_roll = 80
+set d_roll = 30
+set f_yaw = 35
+set d_min_roll = 25
+set d_min_pitch = 28
+set d_min_boost_gain = 30
+set d_min_advance = 50
 
 # rateprofile
 rateprofile 0
@@ -140,3 +143,7 @@ set pitch_expo = 30
 set roll_srate = 73
 set pitch_srate = 73
 set yaw_srate = 75
+
+# end the command batch
+batch end
+

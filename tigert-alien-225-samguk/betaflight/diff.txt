@@ -1,15 +1,11 @@
-# Betaflight / CLRACINGF4 (CLR4) 4.0.0 Apr  3 2019 / 13:44:35 (22b9f3453) MSP API: 1.41
+# version
+# Betaflight / CLRACINGF4 (CLR4) 4.0.3 Jun  1 2019 / 11:15:21 (094cfc956) MSP API: 1.41
 
 # start the command batch
 batch start
 
-# reset configuration to default settings
-defaults nosave
-
 board_name CLRACINGF4
 manufacturer_id 
-mcu_id 003300413436510437363936
-signature 
 
 # name
 name tigert.fpv
@@ -67,9 +63,7 @@ aux 4 35 5 1700 2100 0 0
 # display_name
 
 # master
-set gyro_lowpass_hz = 0
-set gyro_lowpass2_type = PT1
-set acc_hardware = NONE
+set acc_calibration = 68,-30,-289
 set rssi_channel = 9
 set serialrx_provider = SBUS
 set motor_pwm_protocol = DSHOT600
@@ -89,7 +83,8 @@ set osd_vtx_channel_pos = 2081
 set osd_ah_pos = 200
 set osd_current_pos = 459
 set osd_mah_drawn_pos = 2509
-set osd_craft_name_pos = 2090
+set osd_craft_name_pos = 2091
+set osd_display_name_pos = 42
 set osd_gps_speed_pos = 218
 set osd_gps_lon_pos = 82
 set osd_gps_lat_pos = 65
@@ -111,33 +106,29 @@ set osd_rol_ang_pos = 289
 set osd_battery_usage_pos = 392
 set osd_disarmed_pos = 2379
 set osd_nheading_pos = 311
-set osd_nvario_pos = 279
 set osd_esc_tmp_pos = 82
 set osd_esc_rpm_pos = 83
-set vtx_power = 4
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_stat_max_g_force = ON
+set osd_stat_min_link_quality = ON
 set vcd_video_system = PAL
 
 # profile
 profile 0
 
-set dterm_lowpass_hz = 0
+set dterm_lowpass2_hz = 200
 set feedforward_transition = 30
-set iterm_rotation = ON
-set smart_feedforward = ON
-set f_pitch = 100
-set f_roll = 100
-set abs_control_gain = 10
-
-# profile
-profile 1
-
-
-# profile
-profile 2
-
-
-# restore original profile selection
-profile 0
+set iterm_relax_type = GYRO
+set iterm_relax_cutoff = 10
+set i_pitch = 85
+set i_roll = 80
+set d_roll = 30
+set f_yaw = 35
+set d_min_roll = 25
+set d_min_pitch = 28
+set d_min_boost_gain = 30
+set d_min_advance = 50
 
 # rateprofile
 rateprofile 0
@@ -152,25 +143,5 @@ set roll_srate = 82
 set pitch_srate = 82
 set yaw_srate = 82
 
-# rateprofile
-rateprofile 1
-
-
-# rateprofile
-rateprofile 2
-
-
-# rateprofile
-rateprofile 3
-
-
-# rateprofile
-rateprofile 4
-
-
-# rateprofile
-rateprofile 5
-
-
-# restore original rateprofile selection
-rateprofile 0
+# end the command batch
+batch end

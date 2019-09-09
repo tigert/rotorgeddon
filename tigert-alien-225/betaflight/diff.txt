@@ -1,3 +1,5 @@
+# diff
+
 # version
 # Betaflight / CLRACINGF4 (CLR4) 4.0.3 Jun  1 2019 / 11:15:21 (094cfc956) MSP API: 1.41
 
@@ -112,25 +114,16 @@ set osd_disarmed_pos = 2379
 set osd_nheading_pos = 311
 set osd_esc_tmp_pos = 82
 set osd_esc_rpm_pos = 83
-set vtx_band = 3
-set vtx_freq = 5705
+set vtx_band = 1
+set vtx_power = 5
+###ERROR: CORRUPTED CONFIG: vtx_power = 5###
+set vtx_freq = 5865
 set vcd_video_system = PAL
 
 # profile
-profile 2
+profile 0
 
-set dterm_lowpass2_hz = 200
-set feedforward_transition = 30
-set iterm_relax_type = GYRO
-set iterm_relax_cutoff = 10
-set i_pitch = 85
-set i_roll = 80
-set d_roll = 30
-set f_yaw = 35
-set d_min_roll = 25
-set d_min_pitch = 28
-set d_min_boost_gain = 30
-set d_min_advance = 50
+set p_roll = 41
 
 # rateprofile
 rateprofile 0
@@ -146,4 +139,3 @@ set yaw_srate = 75
 
 # end the command batch
 batch end
-

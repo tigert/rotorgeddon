@@ -17,7 +17,8 @@ smix 2 4 0 -50 0 -1
 smix 3 4 1 50 0 -1
 
 # servo
-servo 3 1000 2000 1500 -100
+servo 3 1000 2000 1434 -100
+servo 4 1000 2000 1465 100
 
 # logic
 
@@ -45,13 +46,16 @@ serial 31 32 115200 115200 0 115200
 # aux
 aux 0 0 1 1300 2100
 aux 1 1 1 1700 2100
-aux 2 10 0 1700 2100
-aux 3 27 2 1300 1700
-aux 4 28 2 1700 2100
-aux 5 11 5 1700 2100
-aux 6 32 6 1400 1650
-aux 7 33 6 1650 1900
-aux 8 34 6 1900 2100
+aux 2 3 3 1300 1700
+aux 3 9 3 1300 1700
+aux 4 8 3 1700 2100
+aux 5 10 0 1700 2100
+aux 6 27 2 1300 1700
+aux 7 28 2 1700 2100
+aux 8 11 5 1700 2100
+aux 9 32 6 1400 1650
+aux 10 33 6 1650 1900
+aux 11 34 6 1900 2100
 
 # adjrange
 
@@ -63,62 +67,101 @@ aux 8 34 6 1900 2100
 #wp 0 invalid
 
 # osd_layout
-osd_layout 0 0 26 1 V
+osd_layout 0 0 25 1 V
 osd_layout 0 1 12 0 H
 osd_layout 0 2 0 0 V
-osd_layout 0 7 13 1 V
+osd_layout 0 7 13 2 V
+osd_layout 0 8 2 1 V
 osd_layout 0 9 1 2 H
-osd_layout 0 11 9 12 V
-osd_layout 0 12 14 12 V
+osd_layout 0 11 25 10 V
+osd_layout 0 12 24 12 V
 osd_layout 0 13 1 6 H
-osd_layout 0 14 25 2 V
+osd_layout 0 14 24 2 V
 osd_layout 0 15 24 6 V
-osd_layout 0 22 7 2 V
-osd_layout 0 23 1 2 V
-osd_layout 0 28 23 12 V
+osd_layout 0 22 12 12 V
+osd_layout 0 23 14 12 V
+osd_layout 0 28 1 12 V
+osd_layout 0 30 1 3 V
 osd_layout 0 32 24 11 V
-osd_layout 0 33 1 11 V
-osd_layout 0 35 1 12 V
+osd_layout 0 33 1 10 V
+osd_layout 0 40 2 11 V
 osd_layout 0 46 1 9 H
 osd_layout 0 85 1 6 V
-osd_layout 0 100 0 1 V
-osd_layout 1 0 26 1 V
+osd_layout 0 96 24 4 V
+osd_layout 0 100 1 2 V
+osd_layout 1 0 25 1 V
+osd_layout 1 2 0 0 V
+osd_layout 1 3 8 6 V
+osd_layout 1 4 8 6 V
+osd_layout 1 7 13 2 V
+osd_layout 1 8 2 1 V
+osd_layout 1 11 25 10 V
+osd_layout 1 12 24 12 V
+osd_layout 1 13 1 6 H
+osd_layout 1 14 24 2 V
 osd_layout 1 15 24 6 V
-osd_layout 1 28 23 12 V
+osd_layout 1 22 12 12 V
+osd_layout 1 23 14 12 V
+osd_layout 1 28 1 12 V
+osd_layout 1 30 1 3 V
 osd_layout 1 32 24 11 V
+osd_layout 1 33 1 10 V
+osd_layout 1 34 10 11 H
+osd_layout 1 35 2 9 V
+osd_layout 1 40 2 11 V
+osd_layout 1 41 2 4 V
+osd_layout 1 46 1 9 H
+osd_layout 1 63 1 8 H
 osd_layout 1 85 1 6 V
+osd_layout 1 96 24 4 V
+osd_layout 1 100 1 2 V
+osd_layout 2 0 25 1 V
+osd_layout 2 53 24 11 H
+osd_layout 2 54 24 11 V
+osd_layout 2 85 1 6 V
+osd_layout 2 96 24 6 V
+osd_layout 3 0 25 1 V
+osd_layout 3 28 1 12 V
+osd_layout 3 32 24 11 V
+osd_layout 3 40 1 11 V
+osd_layout 3 45 0 0 V
+osd_layout 3 85 1 6 V
+osd_layout 3 96 24 6 V
 
 # master
 set gyro_hardware_lpf = 20HZ
 set acc_hardware = MPU6000
-set acczero_x = 70
-set acczero_y = 2
-set acczero_z = -147
-set accgain_x = 4091
-set accgain_y = 4100
-set accgain_z = 4006
+set acczero_x = 58
+set acczero_y = 4
+set acczero_z = -109
+set accgain_x = 4092
+set accgain_y = 4101
+set accgain_z = 4017
 set mag_hardware = NONE
 set baro_hardware = BMP280
 set pitot_hardware = NONE
 set rssi_channel = 9
 set motor_pwm_rate = 8000
 set motor_pwm_protocol = DSHOT300
+set failsafe_procedure = RTH
 set align_board_pitch = 30
 set platform_type = AIRPLANE
 set model_preview_type = 8
 set gps_sbas_mode = EGNOS
 set osd_video_system = NTSC
-set osd_units = IMPERIAL
+set osd_left_sidebar_scroll = GROUND_SPEED
+set osd_right_sidebar_scroll = ALTITUDE
+set name = FT Goblin
 
 # profile
 profile 1
 
-set fw_p_pitch = 2
-set fw_i_pitch = 15
-set fw_ff_pitch = 70
-set fw_p_roll = 2
-set fw_i_roll = 15
-set fw_ff_roll = 30
+set fw_p_pitch = 7
+set fw_i_pitch = 16
+set fw_ff_pitch = 73
+set fw_p_roll = 4
+set fw_i_roll = 9
+set fw_ff_roll = 40
 set fw_p_level = 10
 set fw_i_level = 15
 set tpa_rate = 33
@@ -128,3 +171,4 @@ set pitch_rate = 9
 
 # battery_profile
 battery_profile 1
+
